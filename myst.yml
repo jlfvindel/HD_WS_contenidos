@@ -1,0 +1,40 @@
+version: 1
+project:
+  title: Tecnologías en la Web de Datos
+  authors:
+    - name: José Luis Fernández Vindel
+      affiliation: UNED
+  license: CC-BY-4.0    
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/tecnologias_web_datos.pdf
+  toc:
+    - file: index.md
+    - title: Introducción a RDF
+      children:
+        - file: rdf_modelo_datos.md
+        - file: rdf_formatos.md  
+        - file: rdf_vocabularios.md  
+    - title: Consultas SPARQL
+      children:
+        - file: sparql_intro.md
+          children:
+            - file: select_nobel_exploratorias.md
+            - file: select_nobel_vocabulario.md  
+            - file: select_nobel_grupos_patrones.md
+            - file: select_nobel_filtrado_ligado.md
+            - file: select_nobel_agregaciones.md
+        - file: select_wikidata_intro.md
+          children:
+            - file: select_wikidata_enunciados.md
+            - file: select_wikidata_pagina_item.md
+            - file: select_wikidata_clases.md
+            - file: select_wikidata_propiedades.md
+    - title: Ontologías OWL
+      children:
+        - file: owl_intro.md          
+site:
+  options:
+    logo: img/15x15_verde.jpg
+  template: book-theme
